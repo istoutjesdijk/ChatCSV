@@ -24,7 +24,7 @@ Usage
 2. Define the columns you want to translate and the corresponding instructions in the `column_instructions` list.
 3. Run the script with `python script_name.py`.
 
-How It Works
+## How It Works
 The script consists of several functions:
 
 - split_text(): Splits the input text into smaller parts to fit within the OpenAI API character limit.
@@ -50,7 +50,7 @@ The first element of the tuple is the column name.
 The second element is the user message, which will be used to guide the translation model.
 The third element is the system message, which sets the context for the translation model.
 
-Example
+## Example
 Given an input CSV file with columns 'column1', 'column2', 'column3', and 'column4', the script will create a new output file with additional columns containing translated content (e.g., 'column2_translated', 'column3_translated', 'column4_translated').
 
 After configuring the script and running it, you will see the following message:
