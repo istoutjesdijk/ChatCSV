@@ -1,6 +1,6 @@
 # ChatCSV
 
-This Python script uses the OpenAI API to translate the content of specific columns in a CSV file. It utilizes the GPT-3.5-turbo model for translation and saves the translated content in new columns within the output file.
+This Python script uses the OpenAI API to translate the content of specific columns in a CSV file. It utilizes the GPT-3.5-turbo model for translation and saves the translated content in new columns within the output file. Requests are cached to prevent duplicate calls.
 
 Requirements
 - Python 3
@@ -49,6 +49,7 @@ Each tuple in the list corresponds to a single column in the input CSV file.
 The first element of the tuple is the column name.
 The second element is the user message, which will be used to guide the translation model.
 The third element is the system message, which sets the context for the translation model.
+When you type ignore as the user message the column will be ignored completely.
 
 ## Example
 Given an input CSV file with columns 'column1', 'column2', 'column3', and 'column4', the script will create a new output file with additional columns containing translated content (e.g., 'column2_translated', 'column3_translated', 'column4_translated').
