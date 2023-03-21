@@ -84,11 +84,11 @@ column_instructions = [
     ('column4', 'user message', 'system message'),
 ]
 
-Voeg vertaalde kolommen toe aan het DataFrame
+# Voeg vertaalde kolommen toe aan het DataFrame
 for column_name, _, _ in column_instructions:
     df[f"{column_name}_translated"] = ""
 
-Vertaal elke rij in het DataFrame en sla het resultaat op
+# Vertaal elke rij in het DataFrame en sla het resultaat op
 output_file = 'test_translated.csv'
 tqdm.pandas()
 df.progress_apply(lambda row: process_row(row, column_instructions), axis=1).to_csv(output_file, index=False)
